@@ -1,6 +1,6 @@
 # malinatrash.com
 
-Personal site of **Pavel Naumov** — AI-First Senior Golang Engineer.
+Personal site of **Pavel Naumov**, AI-First Senior Golang Engineer.
 
 Static single page served by nginx. Every push to `main` is deployed by Coolify via a GitHub webhook.
 
