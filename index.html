@@ -282,6 +282,13 @@
     }
     .job + .job { margin-top: 16px; }
     .job-meta time { display: block; font: 500 14px/1.5 var(--mono); color: var(--accent); }
+    .co-logo {
+      display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 14px;
+      border-radius: 12px; background: var(--bg-elev); border: 1px solid var(--border-strong);
+    }
+    .co-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: contain; }
+    .co-logo.sm { display: inline-grid; width: 32px; height: 32px; margin: 0 10px 0 0; border-radius: 9px; vertical-align: middle; }
+    .co-logo.sm img { width: 24px; height: 24px; border-radius: 6px; }
     .job-meta .company { margin-top: 6px; font-size: 15px; font-weight: 600; color: var(--text); }
     .job-meta .where { margin-top: 2px; font-size: 13px; color: var(--text-dim); }
     .job-meta .now {
@@ -403,6 +410,7 @@
       .hero { padding: 40px 0 48px; }
       .hero::before { width: 360px; height: 360px; right: -160px; top: -120px; }
       .hero h1 { margin-top: 20px; }
+      .status { font-size: 12px; white-space: nowrap; }
       .hero .lead { margin-bottom: 28px; }
       .metrics { grid-template-columns: repeat(3, 1fr); margin-top: 40px; }
       .metric { padding: 16px 12px; text-align: center; }
@@ -611,6 +619,7 @@
         <ol class="timeline">
           <li class="job">
             <div class="job-meta">
+              <span class="co-logo"><img src="/logos/rocket-firm.svg" alt="Rocket Firm logo" width="36" height="36" loading="lazy" decoding="async"></span>
               <time datetime="2026-03">Mar 2026 — Present</time>
               <div class="company">Rocket Firm</div>
               <div class="where">Almaty · Remote</div>
@@ -621,7 +630,7 @@
               <p>One role, two fintech projects for clients in Kazakhstan.</p>
 
               <article class="project">
-                <h4>Bereke Bank <span>· One Limit &amp; retail lending</span></h4>
+                <h4><span class="co-logo sm"><img src="/logos/bereke-bank.svg" alt="Bereke Bank logo" width="36" height="36" loading="lazy" decoding="async"></span>Bereke Bank <span>· One Limit &amp; retail lending</span></h4>
                 <p>Retail lending for Bereke Bank (Kazakhstan): secured loans, auto loans online and One Limit — a new fully online unsecured credit product. Backend owner of One Limit: took the orchestration service and its BFF from a skeleton to a full online credit flow, from sign-in to document signing, while shipping across a 24-service lending platform.</p>
                 <ul class="points">
                 <li><strong>Orchestration:</strong> designed the client flow on Camunda 7 — 2 BPMN processes, a credit decision with 29 statuses, 41 external-task topics and an in-house Go worker framework.</li>
@@ -637,7 +646,7 @@
               </article>
 
               <article class="project">
-                <h4>Halyk Travel <span>· tours in the Halyk Bank super app</span></h4>
+                <h4><span class="co-logo sm"><img src="/logos/halyk-travel.png" alt="Halyk Travel logo" width="36" height="36" loading="lazy" decoding="async"></span>Halyk Travel <span>· tours in the Halyk Bank super app</span></h4>
                 <p>Tour search, booking and payment inside the Halyk Bank super app. Started the backend from the first commit: 4 of 5 Go services (BFF, tour provider, payments, notifications) and the base of the shared library.</p>
                 <ul class="points">
                 <li><strong>Architecture:</strong> gRPC services on Uber Fx, REST via grpc-gateway and OpenAPI; 64 BFF, 52 provider and 13 payment methods.</li>
@@ -656,6 +665,7 @@
 
           <li class="job">
             <div class="job-meta">
+              <span class="co-logo"><img src="/logos/nlg.png" alt="NLG.KZ logo" width="36" height="36" loading="lazy" decoding="async"></span>
               <time datetime="2023-05">May 2023 — Feb 2026</time>
               <div class="company">NLG.KZ</div>
               <div class="where">Almaty · Remote</div>
@@ -678,8 +688,10 @@
 
           <li class="job">
             <div class="job-meta">
+              <span class="co-logo"><img src="/logos/tirskix-academy.svg" alt="Wincode (TirSkix Academy) logo" width="36" height="36" loading="lazy" decoding="async"></span>
               <time datetime="2022-02">Feb 2022 — Apr 2023</time>
               <div class="company">Wincode</div>
+              <div class="where">now TirSkix Academy</div>
               <div class="where">Irkutsk · Remote</div>
             </div>
             <div>
