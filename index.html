@@ -10,6 +10,10 @@
   <meta name="author" content="Pavel Naumov">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#0d0f12">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Pavel Naumov">
   <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://malinatrash.com/">
   <link rel="alternate" hreflang="en" href="https://malinatrash.com/">
@@ -130,7 +134,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background-color: var(--bg); }
     body {
       margin: 0;
       background: var(--bg);
@@ -164,6 +168,7 @@
       backdrop-filter: saturate(160%) blur(12px);
       -webkit-backdrop-filter: saturate(160%) blur(12px);
       border-bottom: 1px solid var(--border);
+      padding-top: env(safe-area-inset-top);
     }
     .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
     .logo { font: 700 15px/1 var(--mono); color: var(--text); letter-spacing: -.01em; }
