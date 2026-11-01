@@ -88,7 +88,7 @@
         "url": "https://malinatrash.com/",
         "image": "https://malinatrash.com/avatar.jpg",
         "jobTitle": "AI-First Senior Golang Engineer",
-        "worksFor": { "@type": "Organization", "name": "Rocket Tech", "url": "https://www.linkedin.com/company/3998255/" },
+        "worksFor": { "@type": "Organization", "name": "Rocket Firm" },
         "address": { "@type": "PostalAddress", "addressLocality": "Almaty", "addressCountry": "KZ" },
         "knowsLanguage": ["en", "ru"],
         "hasOccupation": {
@@ -294,6 +294,10 @@
     .job ul.points li { position: relative; padding-left: 22px; color: var(--text-muted); }
     .job ul.points li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-family: var(--mono); }
     .job ul.points strong { color: var(--text); font-weight: 600; }
+    .project { margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--border-strong); }
+    .project h4 { margin: 0 0 10px; font-size: 17px; font-weight: 700; }
+    .project h4 span { color: var(--text-dim); font-weight: 500; }
+    .project > p { margin: 0 0 16px; color: var(--text-muted); }
     .tags.small li { font-size: 12px; padding: 4px 10px; }
 
     /* Contacts */
@@ -446,7 +450,7 @@
       <div class="container">
         <div class="hero-grid">
           <div>
-            <p class="status enter" style="--d:.05s">Bereke Bank · Halyk Travel</p>
+            <p class="status enter" style="--d:.05s">Rocket Firm · Bereke Bank &amp; Halyk Travel</p>
             <h1 class="enter" style="--d:.15s">Pavel Naumov</h1>
             <p class="role enter" style="--d:.25s">AI-First Senior Golang Engineer</p>
             <p class="lead enter" style="--d:.35s">
@@ -486,7 +490,7 @@
               building scalable high-load platforms and distributed systems.
             </p>
             <p>
-              Currently <strong>AI-First Senior Golang Engineer</strong> at Rocket Tech: backend owner
+              Currently <strong>AI-First Senior Golang Engineer</strong> at Rocket Firm, working on two fintech projects: backend owner
               of One Limit, a fully online credit product at Bereke Bank, and author of the Halyk Travel
               backend from its first commit.
             </p>
@@ -608,14 +612,18 @@
           <li class="job">
             <div class="job-meta">
               <time datetime="2026-03">Mar 2026 — Present</time>
-              <div class="company">Bereke Bank</div>
-              <div class="where">via Rocket Tech · Remote</div>
+              <div class="company">Rocket Firm</div>
+              <div class="where">Almaty · Remote</div>
               <span class="now">current</span>
             </div>
             <div>
               <h3>AI-First Senior Golang Engineer</h3>
-              <p>Retail lending: secured loans, auto loans online and One Limit — a new fully online unsecured credit product. Backend owner of One Limit: took the orchestration service and its BFF from a skeleton to a full online credit flow, from sign-in to document signing, while shipping across a 24-service lending platform.</p>
-              <ul class="points">
+              <p>One role, two fintech projects for clients in Kazakhstan.</p>
+
+              <article class="project">
+                <h4>Bereke Bank <span>· One Limit &amp; retail lending</span></h4>
+                <p>Retail lending for Bereke Bank (Kazakhstan): secured loans, auto loans online and One Limit — a new fully online unsecured credit product. Backend owner of One Limit: took the orchestration service and its BFF from a skeleton to a full online credit flow, from sign-in to document signing, while shipping across a 24-service lending platform.</p>
+                <ul class="points">
                 <li><strong>Orchestration:</strong> designed the client flow on Camunda 7 — 2 BPMN processes, a credit decision with 29 statuses, 41 external-task topics and an in-house Go worker framework.</li>
                 <li><strong>Integrations:</strong> 11 bank systems behind one service — decision engine, state ID registry, eGov documents, statements, signing over Kafka, OTP/SMS. Every adapter has an env-switched mock, so dev and e2e run without the bank.</li>
                 <li><strong>API &amp; quality:</strong> 40 gRPC methods, a BFF with 37 REST endpoints, 800+ unit tests and Python e2e that drive the BFF like the frontend and verify Camunda, Kafka and the DB.</li>
@@ -623,23 +631,15 @@
                 <li><strong>AI-first support:</strong> Claude Code skills that investigate a client case end to end (DB, logs, Camunda, code) read-only. Agents propose, a human changes prod.</li>
                 <li><strong>Tooling:</strong> rewrote the Camunda support desktop app from Kotlin to Rust + Tauri 2 + Svelte 5 — incident monitor with bulk retry, BPMN path highlight, guarded variable edits.</li>
               </ul>
-              <ul class="tags small" aria-label="Technologies">
+                <ul class="tags small" aria-label="Technologies">
                 <li>Go</li><li>gRPC</li><li>Camunda 7</li><li>Kafka</li><li>PostgreSQL</li><li>Unleash</li><li>Python</li><li>Rust</li>
               </ul>
-            </div>
-          </li>
+              </article>
 
-          <li class="job">
-            <div class="job-meta">
-              <time datetime="2026-04">Apr 2026 — Present</time>
-              <div class="company">Halyk Travel</div>
-              <div class="where">via Rocket Tech · Remote</div>
-              <span class="now">current</span>
-            </div>
-            <div>
-              <h3>AI-First Senior Golang Engineer</h3>
-              <p>Tour search, booking and payment inside the Halyk Bank super app. Started the backend from the first commit: 4 of 5 Go services (BFF, tour provider, payments, notifications) and the base of the shared library.</p>
-              <ul class="points">
+              <article class="project">
+                <h4>Halyk Travel <span>· tours in the Halyk Bank super app</span></h4>
+                <p>Tour search, booking and payment inside the Halyk Bank super app. Started the backend from the first commit: 4 of 5 Go services (BFF, tour provider, payments, notifications) and the base of the shared library.</p>
+                <ul class="points">
                 <li><strong>Architecture:</strong> gRPC services on Uber Fx, REST via grpc-gateway and OpenAPI; 64 BFF, 52 provider and 13 payment methods.</li>
                 <li><strong>Integrations:</strong> 4 external provider APIs — search, tour card, flights, booking, passport recognition, hot offers.</li>
                 <li><strong>Payments:</strong> ePay (Homebank) adapter with OAuth2, payment orchestration in the BFF, card ownership check against the JWT, prepayment by card and credit with contract tests.</li>
@@ -647,9 +647,10 @@
                 <li><strong>Security:</strong> bank and provider tokens split so the provider token never reaches payments; clean 401s at the BFF instead of upstream 500s.</li>
                 <li><strong>Observability:</strong> end-to-end OpenTelemetry/Jaeger, plus a prod debug API exporting redacted logs and traces under hard memory caps — analysed by a Claude Code skill that matches known failure signatures.</li>
               </ul>
-              <ul class="tags small" aria-label="Technologies">
+                <ul class="tags small" aria-label="Technologies">
                 <li>Go</li><li>gRPC</li><li>grpc-gateway</li><li>Uber Fx</li><li>OpenTelemetry</li><li>Jaeger</li><li>Prometheus</li>
               </ul>
+              </article>
             </div>
           </li>
 
